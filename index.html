@@ -56,4 +56,9 @@
       </article>
     </div>
   </div>
+  <script>
+    const calculateAge = birthDate => new Date().getFullYear() - birthDate.getFullYear() - ((new Date().getMonth() < birthDate.getMonth() || new Date().getMonth() == birthDate.getMonth() && new Date().getDate() < birthDate.getDate()) ? 1 : 0);
+    let description = document.querySelector('.post-description');
+    description.textContent = calculateAge(new Date('1999-06-18')) + " y/o Software Developer, Reverse Engineer, Security Researcher"
+  </script>
 </div>
